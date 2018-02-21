@@ -1,0 +1,30 @@
+﻿.dropzone {
+    width: 70px;
+    padding: 40px;
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 20%;
+    background-color: black;
+}
+
+.navbar {
+    /*position: fixed;
+    width: 0;
+    height: 100%;
+    padding-top: 0;
+    padding-right: 200px;
+    
+    left: 0;
+    background-color: #232528;*/
+    display: grid;
+    flex-direction: column;
+    padding-right: 25px;
+    height:100%;
+    position: fixed; 
+    background-color: #232528;
+}
+
+.navbar {
+    flex-basis: 25px;
+    flex-shrink: 3;
+}
