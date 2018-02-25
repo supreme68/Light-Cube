@@ -13132,11 +13132,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimitar\\Desktop\\Light-Cube\\Light-Cube\\Light-Cube.csproj",
+      "projectUniqueName": "C:\\Users\\dimitar\\Desktop\\Light-Cube-master\\Light-Cube-master\\Light-Cube.csproj",
       "projectName": "Light-Cube",
-      "projectPath": "C:\\Users\\dimitar\\Desktop\\Light-Cube\\Light-Cube\\Light-Cube.csproj",
+      "projectPath": "C:\\Users\\dimitar\\Desktop\\Light-Cube-master\\Light-Cube-master\\Light-Cube.csproj",
       "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimitar\\Desktop\\Light-Cube\\Light-Cube\\obj\\",
+      "outputPath": "C:\\Users\\dimitar\\Desktop\\Light-Cube-master\\Light-Cube-master\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

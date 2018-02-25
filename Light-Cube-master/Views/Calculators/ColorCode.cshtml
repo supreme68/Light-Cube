@@ -1,7 +1,9 @@
-﻿
+﻿@model  IEnumerable<Light_Cube.Models.TestModel>
 @{
     ViewData["Title"] = "ColorCode";
 }
+
+
 
 
 <!--MANAGE THE POSITION OF THE JS AND CSS EXTERNAL FILES-->>
@@ -13,10 +15,15 @@
 <title> Color Code Calculator</title>
 <h1> ColorCode Prototype</h1>
 
+@Html.DropDownList("Name1",new SelectList(Model, "Text", "Value"), "Please Choose", new { @class = "select2_single form-control" })
 
+@foreach (var item in Model)
+{
+  @item.Text <br /> 
+}
 
 <!-- 1st strip -->
-<select class="btn btn-primary">
+<select id="strip1" name="strip1" class="btn btn-primary">
     <option value="1">1 Brown</option>
     <option value="2">2 Red</option>
     <option value="3">3 Orange</option>
@@ -79,8 +86,34 @@
 
 
 <environment>
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    @*<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>*@
+
     <script src="~/js/ColorCode.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#strip1').change(function () {
+                var strip1 = $(this).val();
+
+                var data = { StripValue: strip1 };
+                if (strip1 != null || strip1 != '') {
+                    $.ajax({
+                        type: "post",
+                        url: '/Calculators/Test',
+                        data: data,
+                        success: function (returnvalue) {
+                            alert(returnvalue);
+                        },
+                        error: function () {
+                            alert("Error");
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+
 </environment>
