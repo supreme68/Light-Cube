@@ -7,7 +7,7 @@
     background-color: black;
 }
 
-.navbar {
+#navigation {
     /*position: fixed;
     width: 0;
     height: 100%;
@@ -24,7 +24,3 @@
     background-color: #232528;
 }
 
-.navbar {
-    flex-basis: 25px;
-    flex-shrink: 3;
-}

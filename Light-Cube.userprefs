@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="Light-Cube/Light-Cube.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Light-Cube-master/Light-Cube.csproj">
+    <Files>
+      <File FileName="Light-Cube-master/Light-Cube.csproj" Line="15" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

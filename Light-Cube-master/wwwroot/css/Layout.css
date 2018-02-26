@@ -1,4 +1,4 @@
-﻿.topnav {
+﻿/* .topnav {
     overflow: hidden;
     background-color: #232528;
 }
@@ -27,6 +27,12 @@
     display: none;
 }
 
+.sticky{
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child){display:none;}  
     .topnav a.icon {
@@ -51,4 +57,4 @@
             display: block;
             text-align: left;
         }
-}
+} */

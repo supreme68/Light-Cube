@@ -6,23 +6,16 @@
 
 
 <environment>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link rel="stylesheet" href="~/css/Simulator.css" />
+  <link rel="stylesheet" href="~/css/Simulator.css" />
 </environment>
-
-<div class="navbar">
-    
-    <button draggable="true" class="btn btn-primary">Resistor </button><br />
-    <button draggable="true" class="btn btn-primary">LED </button><br />
+<nav class="navbar" id="navigation">
+    <button draggable="true" class="btn btn-primary" onclick="Resistor()">Resistor </button><br />
+    <button draggable="true" class="btn btn-primary">LED </button><br />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     <button draggable="true" class="btn btn-primary">Battery </button><br />
-    <button draggable="true" class="btn btn-primary">Conductor</button><br />
-    </div>
-<div class="dropzone"></div>
+    <button draggable="true" class="btn btn-primary">Conductor</button><br/>
+    </nav>
 
 <environment>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.sound.js"></script>
-    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.js"></script>
-    <script src="~/js/DrawElements.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.1.2/dist/phaser.js"></script>
+    <script src="~/js/Simulator.js"></script>
 </environment>
