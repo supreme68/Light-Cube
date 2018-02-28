@@ -16,5 +16,10 @@ namespace Light_Cube.Controllers
         return View();
         }
 
+        public IActionResult Home()
+        {
+        return View();
+        }
+
     }
 }
