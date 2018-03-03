@@ -7,29 +7,34 @@ using Light_Cube.Models;
 
 namespace Light_Cube.Controllers
 {
-    public class CalculatorsController : Controller
+    public class ToolsController : Controller
     {
         public IActionResult ColorCode()
         {
-            List<TestModel> data = new List<TestModel>();
-            TestModel data1 = new TestModel();
-            data1.Text = "Numan";
-            data1.Value = "28";
+                List<TestModel> data = new List<TestModel>();
+                TestModel data1 = new TestModel();
+                data1.Text = "Numan";
+                data1.Value = "28";
 
-            TestModel data2 = new TestModel() { Value="17",Text="Dimitar"};
+                TestModel data2 = new TestModel() { Value="17",Text="Dimitar"};
 
-            data.Insert(0,data1);
-            data.Insert(1, data2);
+                data.Insert(0,data1);
+                data.Insert(1, data2);
 
-            return View(data);
+                return View(data);
         }
 
-        public IActionResult CalculatorSelector()
+        public IActionResult ToolsSelector()
         {
         return View();
         }
 
         public IActionResult Ohmwall()
+        {
+        return View();
+        }
+
+        public IActionResult Simulator()
         {
         return View();
         }
@@ -43,8 +48,5 @@ namespace Light_Cube.Controllers
 
             return Json(returnvalue);
         }
-
-        
-
     }
 }

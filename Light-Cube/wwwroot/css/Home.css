@@ -1,0 +1,38 @@
+﻿body {
+   background-color:#6EEB83
+}
+
+.image {
+    height: 750px;
+    width: 100%;
+}
+
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+#test{
+    border-top:solid;
+    border-color:black;
+    margin-top:2%;
+}
+
+
+
+.kek{
+   
+    float:left;
+}
+
+#kur {
+    text-align: center;
+}
+
+.esketit{
+    margin-left:45%;
+}
+
+footer {
+    background-color: #2C302E;
+}

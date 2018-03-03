@@ -13123,28 +13123,33 @@
     ]
   },
   "packageFolders": {
-    "/home/dimitar/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\dimitar\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "/home/dimitar/Desktop/LightCube/Light-Cube/Light-Cube.csproj",
+      "projectUniqueName": "C:\\Users\\dimitar\\Desktop\\LightCube\\Light-Cube\\Light-Cube.csproj",
       "projectName": "Light-Cube",
-      "projectPath": "/home/dimitar/Desktop/LightCube/Light-Cube/Light-Cube.csproj",
-      "packagesPath": "/home/dimitar/.nuget/packages/",
-      "outputPath": "/home/dimitar/Desktop/LightCube/Light-Cube/obj/",
+      "projectPath": "C:\\Users\\dimitar\\Desktop\\LightCube\\Light-Cube\\Light-Cube.csproj",
+      "packagesPath": "C:\\Users\\dimitar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dimitar\\Desktop\\LightCube\\Light-Cube\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/dimitar/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
