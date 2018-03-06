@@ -2,7 +2,7 @@
    background-color:#6EEB83
 }
 
-.image {
+.carousel-image {
     height: 750px;
     width: 100%;
 }
@@ -12,25 +12,18 @@
     padding-left: 0;
 }
 
-#test{
+#news{
     border-top:solid;
     border-color:black;
     margin-top:2%;
 }
 
-
-
-.kek{
-   
-    float:left;
-}
-
-#kur {
+footer > h4 {
     text-align: center;
 }
 
-.esketit{
-    margin-left:45%;
+.media-body > img{   
+    float:left;
 }
 
 footer {
