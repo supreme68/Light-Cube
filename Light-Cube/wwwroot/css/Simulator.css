@@ -42,3 +42,7 @@ margin-left:20vh;
 .test2{
    font-size:2vh; 
 }
+
+span{
+    display:inline;
+}

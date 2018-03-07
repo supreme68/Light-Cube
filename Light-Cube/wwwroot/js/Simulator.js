@@ -4,11 +4,22 @@ let winWidth = window.innerWidth;
 let winHeight = window.innerHeight;
 
 //SETUP
-var game = new Phaser.Game(winWidth, winHeight , Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(winWidth, winHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
 function preload() {
-    game.load.image('led', '/sprites/ledsprite.png');   
-    game.load.image('battery', '/sprites/batterysprite.png');
-    game.load.image('resistor', '/sprites/resistorsprite.png');
+
+    //Sprites for elements
+    game.load.image('led', '/sprites/led.png');   
+    game.load.image('battery', '/sprites/battery.png');
+    game.load.image('resistor', '/sprites/resistor.png');
+    game.load.image('wireRight', '/sprites/wireRight.png');
+    game.load.image('wireLeft', '/sprites/wireLeft.png');
+
+    //Sprites for Buttons
+    //game.load.image('ledButton', '/sprites/ledBtn.png');
+    //game.load.image('resistorButton', '/sprites/resistorBtn.png');
+    //game.load.image('batteryButton', '/sprites/batteryBtn.png');
+    //game.load.image('wireButton', '/sprites/wireBtn.png');
 }
 
 function create() {
@@ -18,11 +29,16 @@ function create() {
     game.stage.backgroundColor = '#87FF65';
     //Enables Arcade Physics
     game.physics.startSystem(Phaser.Physics.ARCADE);
+
+    //resistorButton = game.add.button(game.world.centerX - 95, 400, 'resistorButton', Resistor, this, 2, 1, 0);
+    //ledButton = game.add.button(game.world.centerX - 95, 300, 'ledButton', Led, this, 2, 1, 0);
+    //batteryButton = game.add.button(game.world.centerX - 95, 200, 'batteryButton', Battery, this, 2, 1, 0);
+    //wireButton = game.add.button(game.world.centerX - 95, 100, 'wireButton', Wire, this, 2, 1, 0);
+
 }
 
 function update() {
 }
-
 
 //Constructor Functions
 function Resistor() {
@@ -31,9 +47,9 @@ function Resistor() {
     this.voltage = 15;
     this.current = 20;
     this.description = "resistors are dope";
-    resistor.inputEnabled = true;
-    resistor.input.enableDrag();
-    resistor.events.onInputDown.add(displayValues, this);
+    this.resistor.inputEnabled = true;
+    this.resistor.input.enableDrag();
+    this.resistor.events.onInputDown.add(displayValues, this);
 }   
 
 function Led() {
@@ -42,35 +58,57 @@ function Led() {
     this.voltage = 30;
     this.current = 10;
     this.description = "LEDs are dope ";
-    led.inputEnabled = true;
-    led.input.enableDrag(); 
-    led.events.onInputDown.add(displayValues, this);
+    this.led.inputEnabled = true;
+    this.led.input.enableDrag(); 
+    this.led.events.onInputDown.add(displayValues, this);
 }
 
 function Battery() {
     this.battery = game.add.sprite(700, 0, 'battery');
     this.resistance = 12;
     this.voltage = 40;
-    this.current = 70;   
-    battery.inputEnabled = true;
-    battery.input.enableDrag();
-    battery.events.onInputDown.add(displayValues, this);
+    this.current = 70;
+    this.description = "Batterys are dope"
+    this.battery.inputEnabled = true;
+    this.battery.input.enableDrag();
+    this.battery.events.onInputDown.add(displayValues, this);
 }
 
-function Conductor() {
-    this.conductor = game.add.sprite(0, 0, 'skeleton');
+function Wire() {
+    this.wireLeft = game.add.sprite(800, 100, 'wireLeft');
+    wireLeft.anchor.set(0.5);
+    wireLeft.inputEnabled = true;
+    wireLeft.input.enableDrag(true);
+
+    this.wireRight = game.add.sprite(900, 400, 'wireRight');
+    wireRight.anchor.set(0.5);
+    wireRight.inputEnabled = true;
+    wireRight.input.enableDrag(true);
+
+    this.line = new Phaser.Line(this.wireLeft.x, this.wireLeft.y, this.wireRight.x, this.wireRight.y);
+    this.line.fromSprite(this.wireLeft, this.wireRight, false);
+   
     this.resistance = 25;
     this.voltage = 12;
     this.current = 13;
-    conductor.inputEnabled = true;
-    conductor.input.enableDrag();
-    conductor.events.onInputDown.add(displayValues, this);
+    this.description = "Wires are dope ";
+   
+    //wire.events.onInputDown.add(displayValues, this);
 }
 
 function displayValues() {
-    document.getElementById("resistance").innerHTML = resistance;
-    document.getElementById("voltage").innerHTML = voltage;
-    document.getElementById("current").innerHTML = current;
+    document.getElementById("resistance").innerHTML = this.resistance;
+    document.getElementById("voltage").innerHTML = this.voltage;
+    document.getElementById("current").innerHTML = this.current;
+    document.getElementById("description").innerHTML = this.description;
+}
+
+function hideCustom() {
+    document.getElementById("navigation").style.display = 'none';
+}
+
+function showCustom() {
+    document.getElementById("navigation").style.display = ' grid';
 }
 
 //Event Functions
