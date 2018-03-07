@@ -103,12 +103,16 @@ function displayValues() {
     document.getElementById("description").innerHTML = this.description;
 }
 
-function hideCustom() {
+function customMode() {
     document.getElementById("navigation").style.display = 'none';
+    location.reload();
+    let resistor = game.add.sprite(0, 0, 'resistor');
 }
 
-function showCustom() {
+function readyCircuits() {
     document.getElementById("navigation").style.display = ' grid';
+   
+
 }
 
 //Event Functions

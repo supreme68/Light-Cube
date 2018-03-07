@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "Simulator";
+}
+
+
+
+<environment>
+    <link rel="stylesheet" href="~/css/Simulator.css" />
+</environment>
+
+<nav class="navbar" id="navigation">
+    <button id="btn1" draggable="true" class="btn btn-success">On</button><br />
+    <button draggable="true" class="btn btn-danger">Off</button><br />
+</nav>
+
+<div id="stats">
+    <div class="test2">
+        <div class="row"></div>
+        <p id="test" class="col-sm-12">Stats</p>
+        <p class="col-sm-12">Resistance:<span id="resistance"></span></p>
+        <p class="col-sm-12">Voltage:<span id="voltage"></span></p>
+        <p class="col-sm-12">Current:<span id="current"></span></p>
+        <p class="col-sm-12">Description:<span id="description"></span></p>
+        <a class="btn btn-primary" asp-action="SimulatorCustom" asp-controller="Tools">Custom Circuits</a>
+      
+    </div>
+</div>
+
+<environment>
+    <script src="~/lib/phaser.js"></script>
+    <script src="~/js/SimulatorReady.js"></script>
+</environment>

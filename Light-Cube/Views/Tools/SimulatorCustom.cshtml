@@ -13,6 +13,8 @@
     <button draggable="true" class="btn btn-primary" onclick="Led()">LED </button><br />
     <button draggable="true" class="btn btn-primary" onclick="Battery()">Battery </button><br />
     <button draggable="true" class="btn btn-primary" onclick="Wire()">Wire</button><br />
+    <button id="btn1" draggable="true" class="btn btn-success">On</button><br />
+    <button draggable="true" class="btn btn-danger">Off</button><br />
 </nav>
 
 
@@ -24,8 +26,7 @@
         <p class="col-sm-12">Voltage:<span id="voltage"></span></p>
         <p class="col-sm-12">Current:<span id="current"></span></p>
         <p class="col-sm-12">Description:<span id="description"></span></p>
-        <button class="btn btn-primary" onclick=" hideCustom()">Custom mode</button>
-        <button class="btn btn-primary"  onclick=" showCustom()">Ready circuits</button>
+       <a class="btn btn-primary" asp-action="SimulatorReady" asp-controller="Tools">Ready Circuits</a>
     </div>
 </div>
 
@@ -34,5 +35,5 @@
 
 <environment>
     <script src="~/lib/phaser.js"></script>
-    <script src="~/js/Simulator.js"></script>
+    <script src="~/js/SimulatorCustom.js"></script>
 </environment>
