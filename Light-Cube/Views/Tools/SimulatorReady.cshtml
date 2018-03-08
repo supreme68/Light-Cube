@@ -10,20 +10,18 @@
 </environment>
 
 <nav class="navbar" id="navigation">
-    <button id="btn1" draggable="true" class="btn btn-success">On</button><br />
-    <button draggable="true" class="btn btn-danger">Off</button><br />
+    <button id="btn1" draggable="true" class="btn btn-success" onclick="On()">On</button><br />
+    <button draggable="true" class="btn btn-danger" onclick="Off()">Off</button><br />
 </nav>
 
 <div id="stats">
     <div class="test2">
         <div class="row"></div>
         <p id="test" class="col-sm-12">Stats</p>
-        <p class="col-sm-12">Resistance:<span id="resistance"></span></p>
-        <p class="col-sm-12">Voltage:<span id="voltage"></span></p>
-        <p class="col-sm-12">Current:<span id="current"></span></p>
-        <p class="col-sm-12">Description:<span id="description"></span></p>
-        <a class="btn btn-primary" asp-action="SimulatorCustom" asp-controller="Tools">Custom Circuits</a>
-      
+        <p class="col-sm-12"><span id="voltage"></span></p>
+        <p class="col-sm-12"><span id="resistance"></span></p>
+        <p class="col-sm-12"><span id="current"></span></p>
+        <a class="btn btn-primary" asp-action="SimulatorCustom" asp-controller="Tools">Custom Circuits</a>     
     </div>
 </div>
 

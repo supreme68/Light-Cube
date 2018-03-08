@@ -12,12 +12,14 @@ function preload() {
     game.load.image('led', '/sprites/led.png');
     game.load.image('battery', '/sprites/battery.png');
     game.load.image('resistor', '/sprites/resistor.png');
-    game.load.image('wireRight', '/sprites/wireRight.png');
-    game.load.image('wireLeft', '/sprites/wireLeft.png');
+    game.load.image('wire', '/sprites/wire.png');
+    game.load.image('wireVertical', '/sprites/wireVertical.png');
+    //game.load.image('wireRight', '/sprites/wireRight.png');
+    //game.load.image('wireLeft', '/sprites/wireLeft.png');
     
 }
 
-function create() {
+function create() { 
     //Makes the background scalable
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     //Changes background
@@ -29,6 +31,8 @@ function create() {
     Battery();
     Resistor();
     Led();
+    Wire();
+   
 }
 
 function update() {
@@ -36,55 +40,113 @@ function update() {
 
 //Constructor functions
 function Battery() {
-    this.batteryResistance = 12;
-    this.batteryVoltage = 40;
-    this.batteryCurrent = 70;
-    this.batteryDescription = "batteries are dope";
-    this.battery = game.add.sprite(500, 500, 'battery');
+    //this.batteryVoltage = 9;
+    this.battery = game.add.sprite(700, 500, 'battery');
     this.battery.inputEnabled = true;
     this.battery.events.onInputDown.add(batteryValues, this);
 }
 
 function Resistor() {
-    this.resistorResistance = 40;
-    this.resistorVoltage = 40;
-    this.resistorCurrent = 70;
-    this.resistorDescription = "resistors are dope";
-    this.resistor = game.add.sprite(700, 300, 'resistor');
+    //this.resistorResistance = 48;
+    this.resistor = game.add.sprite(700, 315, 'resistor');
     this.resistor.inputEnabled = true;
     this.resistor.events.onInputDown.add(resistorValues, this);
 }
 
 function Led() {
-    this.ledResistance = 40;
-    this.ledVoltage = 40;
-    this.ledCurrent = 90;
-    this.ledDescription = "leds are dope";
-    this.led = game.add.sprite(700, 400, 'led');
+    //this.ledVoltage = 0;
+    //this.ledCurrent = 25;
+    this.led = game.add.sprite(870, 225, 'led');
     this.led.inputEnabled = true;
     this.led.events.onInputDown.add(ledValues, this);
 }
 
+function Wire() {
+    //this.wireVoltage = 0;
+    this.wire = game.add.sprite(230, 325, 'wire');
+    this.wire0 = game.add.sprite(410, 325, 'wire');
+    this.wire1 = game.add.sprite(755, 500, 'wireVertical');
+    //this.wire.inputEnabled = true;
+    //this.wire.events.onInputDown.add(wireValues, this);
+}
+
 function batteryValues() {
-    document.getElementById("resistance").innerHTML = this.batteryResistance;
-    document.getElementById("voltage").innerHTML = this.batteryVoltage;
-    document.getElementById("current").innerHTML = this.batteryCurrent;
-    document.getElementById("description").innerHTML = this.batteryDescription;
+     this.batteryVoltage = 9;
+    document.getElementById("voltage").innerHTML = "Voltage:" + this.batteryVoltage + "V";
+    document.getElementById("current").innerHTML = "" ;
+    document.getElementById("resistance").innerHTML = "" ;
 }
 
 function resistorValues() {
-    document.getElementById("resistance").innerHTML = this.resistorResistance;
-    document.getElementById("voltage").innerHTML = this.resistorVoltage;
-    document.getElementById("current").innerHTML = this.resistorCurrent;
-    document.getElementById("description").innerHTML = this.resistorDescription;
+    this.resistorResistance = 48;
+    document.getElementById("resistance").innerHTML = "Resistance"  +  this.resistorResistance + "Ohms";
+    document.getElementById("current").innerHTML = "";
+    document.getElementById("voltage").innerHTML = "";
+    }
+
+function ledValues() {
+    this.ledVoltage = 0;
+    this.ledCurrent = 25;
+    this.x = document.getElementById("voltage").innerHTML = "Voltage:" + this.ledVoltage + "V";
+    this.y = document.getElementById("current").innerHTML = "Current" + this.ledCurrent + "mA";
+    document.getElementById("resistance").innerHTML = "";
+}
+
+//function wireValues() {
+//    document.getElementById("voltage").innerHTML = "Voltage:" + this.wireVoltage + "V";
+//}
+
+
+function On() {
+    this.battery = game.add.sprite(700, 500, 'battery');
+    this.battery.inputEnabled = true;
+    this.battery.events.onInputDown.add(batteryValues1, this);
+
+    this.resistor = game.add.sprite(700, 315, 'resistor');
+    this.resistor.inputEnabled = true;
+    this.resistor.events.onInputDown.add(resistorValues1, this);
+
+    this.led = game.add.sprite(870, 225, 'led');
+    this.led.inputEnabled = true;
+    this.led.events.onInputDown.add(ledValues1, this);
+}
+
+function Off() {
+    this.battery = game.add.sprite(700, 500, 'battery');
+    this.battery.inputEnabled = true;
+    this.battery.events.onInputDown.add(batteryValues, this);
+
+    this.resistor = game.add.sprite(700, 315, 'resistor');
+    this.resistor.inputEnabled = true;
+    this.resistor.events.onInputDown.add(resistorValues, this);
+
+    this.led = game.add.sprite(870, 225, 'led');
+    this.led.inputEnabled = true;
+    this.led.events.onInputDown.add(ledValues, this);
 }
 
 
-function ledValues() {
-    document.getElementById("resistance").innerHTML = this.ledResistance;
-    document.getElementById("voltage").innerHTML = this.ledVoltage;
-    document.getElementById("current").innerHTML = this.ledCurrent;
-    document.getElementById("description").innerHTML = this.ledDescription;
+
+function batteryValues1() {
+    this.batteryVoltage = 9;
+    document.getElementById("voltage").innerHTML = "Voltage:" + this.batteryVoltage + "V";
+    document.getElementById("current").innerHTML = "";
+    document.getElementById("resistance").innerHTML = "";
+}
+
+function resistorValues1() {
+    this.resistorResistance = 48;
+    document.getElementById("resistance").innerHTML = "Resistance" + this.resistorResistance + "Ohms";
+    document.getElementById("current").innerHTML = "";
+    document.getElementById("voltage").innerHTML = "";
+}
+
+function ledValues1() {
+    this.ledVoltage = 1.2;
+    this.ledCurrent = 25;
+    this.x = document.getElementById("voltage").innerHTML = "Voltage:" + this.ledVoltage + "V";
+    this.y = document.getElementById("current").innerHTML = "Current" + this.ledCurrent + "mA";
+    document.getElementById("resistance").innerHTML = "";
 }
 
 //function Wire() {
@@ -96,5 +158,3 @@ function ledValues() {
 //    this.resistor.inputEnabled = true;
 //    this.resistor.events.onInputDown.add(resistorValues, this);
 //}
-
-
