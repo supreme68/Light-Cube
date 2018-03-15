@@ -1,4 +1,4 @@
-﻿var countDownDate = new Date("March 7 , 2018 22:37:25").getTime();
+﻿var countDownDate = new Date("March 7 , 2019 22:37:25").getTime();
 
 
 var countdownfunction = setInterval(function () {
@@ -15,6 +15,7 @@ var countdownfunction = setInterval(function () {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     //Output
-    document.getElementById("demo").innerHTML = "Deadline Reached";
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";;
 })
 

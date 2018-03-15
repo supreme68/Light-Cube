@@ -32,7 +32,6 @@ function create() {
     Resistor();
     Led();
     Wire();
-   
 }
 
 function update() {

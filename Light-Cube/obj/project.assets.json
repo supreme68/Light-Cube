@@ -13128,9 +13128,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Users\\dimitar\\Desktop\\LightCube\\Light-Cube\\Light-Cube.csproj",
       "projectName": "Light-Cube",

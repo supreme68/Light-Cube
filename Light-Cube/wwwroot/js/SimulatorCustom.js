@@ -4,7 +4,8 @@ let winWidth = window.innerWidth;
 let winHeight = window.innerHeight;
 
 //SETUP
-var game = new Phaser.Game(winWidth, winHeight, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+var game = new Phaser.Game(winWidth, winHeight, Phaser.AUTO, '',
+    { preload: preload, create: create, update: update });
 
 function preload() {
 
@@ -15,11 +16,6 @@ function preload() {
     game.load.image('wireRight', '/sprites/wireRight.png');
     game.load.image('wireLeft', '/sprites/wireLeft.png');
 
-    //Sprites for Buttons
-    //game.load.image('ledButton', '/sprites/ledBtn.png');
-    //game.load.image('resistorButton', '/sprites/resistorBtn.png');
-    //game.load.image('batteryButton', '/sprites/batteryBtn.png');
-    //game.load.image('wireButton', '/sprites/wireBtn.png');
 }
 
 function create() {
@@ -29,12 +25,6 @@ function create() {
     game.stage.backgroundColor = '#87FF65';
     //Enables Arcade Physics
     game.physics.startSystem(Phaser.Physics.ARCADE);
-
-    //resistorButton = game.add.button(game.world.centerX - 95, 400, 'resistorButton', Resistor, this, 2, 1, 0);
-    //ledButton = game.add.button(game.world.centerX - 95, 300, 'ledButton', Led, this, 2, 1, 0);
-    //batteryButton = game.add.button(game.world.centerX - 95, 200, 'batteryButton', Battery, this, 2, 1, 0);
-    //wireButton = game.add.button(game.world.centerX - 95, 100, 'wireButton', Wire, this, 2, 1, 0);
-
 }
 
 function update() {
@@ -101,18 +91,6 @@ function displayValues() {
     document.getElementById("voltage").innerHTML = this.voltage;
     document.getElementById("current").innerHTML = this.current;
     document.getElementById("description").innerHTML = this.description;
-}
-
-function customMode() {
-    document.getElementById("navigation").style.display = 'none';
-    location.reload();
-    let resistor = game.add.sprite(0, 0, 'resistor');
-}
-
-function readyCircuits() {
-    document.getElementById("navigation").style.display = ' grid';
-   
-
 }
 
 //Event Functions

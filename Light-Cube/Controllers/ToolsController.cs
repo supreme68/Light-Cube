@@ -22,11 +22,6 @@ namespace Light_Cube.Controllers
         return View();
         }
 
-        public IActionResult Ohmwall()
-        {
-        return View();
-        }
-
         public IActionResult SimulatorCustom()
         {
         return View();
