@@ -1,0 +1,48 @@
+﻿.dropzone {
+    width: 70px;
+    padding: 40px;
+    position: fixed;
+    margin-left: 50%;
+    margin-top: 20%;
+    background-color: black;
+}
+
+#navigation {
+    /*position: fixed;
+    width: 0;
+    height: 100%;
+    padding-top: 0;
+    padding-right: 200px;
+    
+    left: 0;
+    background-color: #232528;*/
+    display: grid;
+    flex-direction: column;
+    padding-right: 25px;
+    height:100%;
+    position: fixed; 
+    background-color: #232528;
+}
+
+#stats{
+    padding-right:30%;
+    background-color:#232528;
+    right:0;    
+    height:30vh;
+    width:10%;
+    position:fixed;
+    color:white;
+}
+
+#test{ 
+font-size:5vh;
+margin-left:20vh;
+}
+    
+.test2{
+   font-size:2vh; 
+}
+
+span{
+    display:inline;
+}

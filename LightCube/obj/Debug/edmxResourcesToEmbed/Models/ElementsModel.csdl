@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="elementsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Battery">
+    <Key>
+      <PropertyRef Name="BatteriesID" />
+    </Key>
+    <Property Name="BatteriesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Voltage" Type="Int32" Nullable="false" />
+    <Property Name="Information" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LED">
+    <Key>
+      <PropertyRef Name="LedID" />
+    </Key>
+    <Property Name="LedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Voltage" Type="Int32" Nullable="false" />
+    <Property Name="Ampers" Type="Int32" Nullable="false" />
+    <Property Name="Information" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Resistor">
+    <Key>
+      <PropertyRef Name="ResistorsID" />
+    </Key>
+    <Property Name="ResistorsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Ohms" Type="Int32" Nullable="false" />
+    <Property Name="Information" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="elementsDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Batteries" EntityType="Self.Battery" />
+    <EntitySet Name="LEDs" EntityType="Self.LED" />
+    <EntitySet Name="Resistors" EntityType="Self.Resistor" />
+  </EntityContainer>
+</Schema>

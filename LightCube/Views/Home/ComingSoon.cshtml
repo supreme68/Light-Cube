@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "ComingSoon";
+}
+
+<meta name="viewport" content="width=device-width" />
+<title>ComingSoon</title>
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/css/ComingSoon.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="bgimg">
+    <div class="middle">
+        <h1 id="font">Light Cube</h1>
+        <h1>COMING SOON</h1>
+        <hr>
+        <p id="demo"></p>
+        @Html.ActionLink("See Development", "Home", "Home", new { @class = "btn btn-primary btn-lg" })
+    </div>
+</div>
+
+
+<!--jQuery-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+<script src="~/Content/js/ComingSoon.js"></script>

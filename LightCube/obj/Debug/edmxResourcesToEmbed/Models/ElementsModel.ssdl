@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="elementsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Batteries">
+    <Key>
+      <PropertyRef Name="BatteriesID" />
+    </Key>
+    <Property Name="BatteriesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Voltage" Type="int" Nullable="false" />
+    <Property Name="Information" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LEDs">
+    <Key>
+      <PropertyRef Name="LedID" />
+    </Key>
+    <Property Name="LedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Voltage" Type="int" Nullable="false" />
+    <Property Name="Ampers" Type="int" Nullable="false" />
+    <Property Name="Information" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Resistors">
+    <Key>
+      <PropertyRef Name="ResistorsID" />
+    </Key>
+    <Property Name="ResistorsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ohms" Type="int" Nullable="false" />
+    <Property Name="Information" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="elementsDBModelStoreContainer">
+    <EntitySet Name="Batteries" EntityType="Self.Batteries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LEDs" EntityType="Self.LEDs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resistors" EntityType="Self.Resistors" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="elementsDBModelStoreContainer" CdmEntityContainer="elementsDBEntities">
+    <EntitySetMapping Name="Batteries">
+      <EntityTypeMapping TypeName="elementsDBModel.Battery">
+        <MappingFragment StoreEntitySet="Batteries">
+          <ScalarProperty Name="BatteriesID" ColumnName="BatteriesID" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LEDs">
+      <EntityTypeMapping TypeName="elementsDBModel.LED">
+        <MappingFragment StoreEntitySet="LEDs">
+          <ScalarProperty Name="LedID" ColumnName="LedID" />
+          <ScalarProperty Name="Voltage" ColumnName="Voltage" />
+          <ScalarProperty Name="Ampers" ColumnName="Ampers" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resistors">
+      <EntityTypeMapping TypeName="elementsDBModel.Resistor">
+        <MappingFragment StoreEntitySet="Resistors">
+          <ScalarProperty Name="ResistorsID" ColumnName="ResistorsID" />
+          <ScalarProperty Name="Ohms" ColumnName="Ohms" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

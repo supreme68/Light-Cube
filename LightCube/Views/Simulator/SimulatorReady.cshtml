@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "SimulatorReady";
+}
+
+<link rel="stylesheet" href="~/Content/css/Simulator.css" />
+
+<nav class="navbar" id="navigation">
+    <button id="btn1" draggable="true" class="btn btn-success" onclick="On()">On</button><br />
+    <button draggable="true" class="btn btn-danger" onclick="Off()">Off</button><br />
+</nav>
+
+<div id="stats">
+    <div class="test2">
+        <div class="row"></div>
+        <p id="test" class="col-sm-12">Stats</p>
+        <p class="col-sm-12"><span id="voltage"></span></p>
+        <p class="col-sm-12"><span id="resistance"></span></p>
+        <p class="col-sm-12"><span id="current"></span></p>
+        @Html.ActionLink("Custom Circuits", "SimulatorCustom", "Simulator", null, new { @class = "btn btn-primary" })
+    </div>
+</div>
+
+
+<script src="~/scripts/phaser.js"></script>
+<script src="~/Content/js/SimulatorReady.js"></script>
