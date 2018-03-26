@@ -11,12 +11,6 @@ namespace Light_Cube.Controllers
     {
 
 
-        public IActionResult ColorCode()
-        {
-        return View();
-        }
-
-
         public IActionResult ToolsSelector()
         {
         return View();
@@ -32,30 +26,30 @@ namespace Light_Cube.Controllers
         return View();
         }
 
-        //[HttpPost]
-        //public IActionResult Test(int StripValue)
-        //{
-        //    int value1 = StripValue;
+        [HttpPost]
+        public IActionResult Test(int StripValue)
+        {
+        int value1 = StripValue;
 
-        //    string returnvalue = "My value come :" + value1;
+        string returnvalue = "My value come :" + value1;
 
-        //    return Json(returnvalue);
-        //}
+        return Json(returnvalue);
+        }
 
-        //public IActionResult ColorCode()
-        //{
-        //        List<TestModel> data = new List<TestModel>();
-        //        TestModel data1 = new TestModel();
-        //        data1.Text = "Numan";
-        //        data1.Value = "28";
+        public IActionResult ColorCode()
+        {
+        List<TestModel> data = new List<TestModel>();
+        TestModel data1 = new TestModel();
+        data1.Text = "Numan";
+        data1.Value = "28";
 
-        //        TestModel data2 = new TestModel() { Value="17",Text="Dimitar"};
+        TestModel data2 = new TestModel() { Value = "17", Text = "Dimitar" };
 
-        //        data.Insert(0,data1);
-        //        data.Insert(1, data2);
+        data.Insert(0, data1);
+        data.Insert(1, data2);
 
-        //        return View(data);
-        //}
+        return View(data);
+        }
 
 
     }

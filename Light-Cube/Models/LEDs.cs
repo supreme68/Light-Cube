@@ -1,16 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Light_Cube.Models
 {
-    public class LEDs
+    public partial class Leds
     {
-    public int LedID { get; set; }
-    public int Voltage { get; set; }
-    public int Ampers { get; set; }
-    public string Information { get; set; }
-}
-
+        public int LedId { get; set; }
+        public int Voltage { get; set; }
+        public int Ampers { get; set; }
+        public string Information { get; set; }
+    }
 }

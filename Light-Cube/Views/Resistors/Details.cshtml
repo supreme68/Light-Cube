@@ -1,0 +1,30 @@
+﻿@model Light_Cube.Models.Resistors
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Resistors</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ohms)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ohms)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Information)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Information)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ResistorsId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

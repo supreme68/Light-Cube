@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Light_Cube.Models
 {
-    public class Batteries
+    public partial class Batteries
     {
-    public int BatteriesID { get; set; }
-    public int Voltage { get; set; }
-    public string Information { get; set; }
-}
+        public int BatteriesId { get; set; }
+        public int Voltage { get; set; }
+        public string Information { get; set; }
+    }
 }

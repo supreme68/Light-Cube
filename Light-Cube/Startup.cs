@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Light_Cube.Data;
+using Light_Cube.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,9 +23,9 @@ namespace Light_Cube
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-        services.AddDbContext<ElementsContext>(options =>
-       options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddMvc();
+        services.AddDbContext<elementsDBContext>(options =>
+       options.UseSqlServer(Configuration.GetConnectionString("elementsDB")));
+        services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
