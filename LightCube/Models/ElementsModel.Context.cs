@@ -28,5 +28,6 @@ namespace LightCube.Models
         public virtual DbSet<Battery> Batteries { get; set; }
         public virtual DbSet<LED> LEDs { get; set; }
         public virtual DbSet<Resistor> Resistors { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

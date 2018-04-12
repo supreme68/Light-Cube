@@ -12,15 +12,19 @@ namespace LightCube.Controllers
     {
 
         private elementsDBEntities db = new elementsDBEntities();
-        // GET: Simulator
-        public ActionResult SimulatorCustom()
+        
+        public ActionResult Index()
         {
-
-        return View(db.Resistors);
-
+        return View(db);
         } 
+        //[HttpPost]
 
-        public ActionResult SimulatorReady()
+        //public ActionResult Simulator(Resistor db)
+        //{
+        //return Json(db);
+        //}
+
+        public ActionResult ExampleSchema()
         {
         return View();
         }

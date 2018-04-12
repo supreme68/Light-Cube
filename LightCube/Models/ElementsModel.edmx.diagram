@@ -5,9 +5,10 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="39d5378c5b694d6681f307fd8d2f4122" Name="Diagram1">
-        <EntityTypeShape EntityType="elementsDBModel.Battery" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elementsDBModel.LED" Width="1.5" PointX="5" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="elementsDBModel.Resistor" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elementsDBModel.Battery" Width="1.5" PointX="3.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elementsDBModel.LED" Width="1.5" PointX="7.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elementsDBModel.Resistor" Width="1.5" PointX="5.125" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="elementsDBModel.User" Width="1.5" PointX="1.125" PointY="0.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
