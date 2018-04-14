@@ -48,7 +48,7 @@ function Battery() {
 
 function Resistor() {
     //this.resistorResistance = 48;
-    this.resistor = game.add.sprite(700, 315, 'resistor');
+    this.resistor = game.add.sprite(722, 300, 'resistor');
     this.resistor.inputEnabled = true;
     this.resistor.events.onInputDown.add(resistorValues, this);
 }
@@ -56,7 +56,7 @@ function Resistor() {
 function Led() {
     //this.ledVoltage = 0;
     //this.ledCurrent = 25;
-    this.led = game.add.sprite(870, 225, 'led');
+    this.led = game.add.sprite(870, 230, 'led');
     this.led.inputEnabled = true;
     this.led.events.onInputDown.add(ledValues, this);
 }
